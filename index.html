@@ -1,43 +1,58 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="initial-scale=1.0, 
-      width=device-width" />
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mapa</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
 </head>
-
 <body>
-  <div style="width: 640px; height: 480px" id="mapContainer"></div>
+  <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2Fyb2Nyb21hdGljYSIsImEiOiJjamsxOWt3aG4wMGF5M2tsN2huMjVkYWtkIn0.XOH8AhfjmFY4baCYXfA4eA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-70.666666666667,-33.45],
+    zoom:12
 
-  <script type="text/javascript" charset="utf-8">
-    //Initialize the Platform object:
-    var platform = new H.service.Platform({
-      'app_id': '{Q8I2xe5IxZg8eGV14Ac9} ',
-      'app_code': '{yqpcW0C4tWelltmg8094-g} '
-      
+    
+});
+map.addControl(new mapboxgl.NavigationControl());
+
+map.on('load', function () {
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-70.641709,-33.419087]
+                    },
+                    "properties": {
+                        "title": "Laboratoria",
+                        "icon": "college"
+                    }
+                },]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-11",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.3],
+            "text-anchor": "top"
+        }
     });
-
-      var targetElement = document.getElementById('mapContainer');
-
-// Get default map types from the platform object:
-var defaultLayers = platform.createDefaultLayers();
-
-// Instantiate the map:
-var map = new H.Map(
-  document.getElementById('mapContainer'),
-  defaultLayers.normal.map,
-  {
-  zoom: 10,
-  center: { lat: -33.45, lng: -70.66 }
-  });
-
-// Create the default UI:
-var ui = H.ui.UI.createDefault(map, defaultLayers);
-
+});
 </script>
 </body>
 </html>
