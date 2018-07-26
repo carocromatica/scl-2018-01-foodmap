@@ -1,47 +1,135 @@
-.filter-group {
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 5;
-  border-radius: 3px;
-  width: 120px;
-  color: #fff;
-}
+.container{margin: 0 auto;}
+.asd{top:750px;}
 
-.filter-group input[type=checkbox]:first-child + label {
-  border-radius: 3px 3px 0 0;
-}
-
-.filter-group label:last-child {
-  border-radius: 0 0 3px 3px;
-  border: none;
-}
-
-.filter-group input[type=checkbox] {
+#popup {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: -300px;
   display: none;
 }
-
-.filter-group input[type=checkbox] + label {
-  background-color: #3386c0;
-  display: block;
-  cursor: pointer;
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+#popup:target {
+  visibility:visible;
+  opacity: 1;
+  background-color: rgba(0,0,0,0.8);
+  display:block;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:0;
+  z-index: 999;
+  transition:all 1s;
+}
+.popup-contenedor {
+  position: relative;
+  margin:7% auto;
+  padding:30px 50px;
+  background-color: #fafafa;
+  color:#333;
+  border-radius: 3px;
+  width:50%;
+}
+a.popup-cerrar {
+  position: absolute;
+  top:3px;
+  right:3px;
+  background-color: #333;
+  padding:7px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 1;
+  color:#fff;
 }
 
-.filter-group input[type=checkbox] + label {
-  background-color: #3386c0;
-  text-transform: capitalize;
+
+html,
+body {
+  height: 100%;
 }
 
-.filter-group input[type=checkbox] + label:hover,
-.filter-group input[type=checkbox]:checked + label {
-  background-color: #4ea0da;
+body {
+  font: 600 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: #f69d75;
+  color: #555555
 }
 
-.filter-group input[type=checkbox]:checked + label:before {
-  content: '✔';
-  margin-right: 5px;
+a {
+  color: inherit;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn {
+  background-color: #fff;
+  padding: 1em 3em;
+  border-radius: 3px;
+  text-decoration: none;
+  top:700px;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+  color: #333333;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+  color: #333333;
+}
+
+i {
+  vertical-align: middle;
 }
