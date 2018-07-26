@@ -16,6 +16,14 @@ map.addControl(new MapboxGeocoder({
 }));
 
 
+// Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: {
+      enableHighAccuracy: true
+  },
+  trackUserLocation: true
+}));
+
 map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function () {
   // Add a layer showing the places.
@@ -29,7 +37,7 @@ map.on('load', function () {
               "features": [{
                   "type": "Feature",
                   "properties": {
-                      "description": "Emporio la Rosa",
+                      "description": "Helados artesanales",
                       "icon": "cafe",
                       "text": "Emporio la Rosa"
                     
@@ -41,9 +49,9 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "Bendita Pasta",
-                      "icon": "cafe",
-                      "text": "Bendita Pasta"
+                      "description": "Especialidad en pastas y bruschetas",
+                      "icon": "restaurant",
+                      "text": "Restaurant Bendita Pasta"
                   },
                   "geometry": {
                       "type": "Point",
@@ -52,24 +60,65 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "rest",
-                      "icon": "bar"
+                      "description": "Café pintoresco",
+                      "icon": "cafe",
+                      "text": "Cafe del poeta"
                   },
                   "geometry": {
                       "type": "Point",
-                      "coordinates": [-77.090372, 38.881189]
+                      "coordinates": [-71.62441373740486, -33.04306430901435]
                   }
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "rest",
-                      "icon": "art-gallery"
+                      "description": "Restaurant Peruano",
+                      "icon": "restaurant",
+                      "text": "  Nazca"
                   },
                   "geometry": {
                       "type": "Point",
-                      "coordinates": [-77.111561, 38.882342]
+                      "coordinates": [-71.62485300287267, -33.042700258237126]
                   }
-              }, ]
+              },
+            
+              {
+                "type": "Feature",
+                "properties": {
+                    "description": "Bar Patrimonial",
+                    "icon": "bar",
+                    "text": " Bar Cinzano"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-71.62497333715338, -33.04306571313724]
+                }
+            },
+          
+            {
+              "type": "Feature",
+              "properties": {
+                  "description": "Completos rancios",
+                  "icon": "fast-food",
+                  "text": " Otro K-nibal"
+              },
+              "geometry": {
+                  "type": "Point",
+                  "coordinates": [-71.62515622482663, -33.04315950108205]
+              }
+          },
+        
+          {
+            "type": "Feature",
+            "properties": {
+                "description": "Blondie Pobre xD",
+                "icon": "bar",
+                "text": " Máscara Pub"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.62488619664786, -33.04300168451749]
+            }
+        }]
           }
       },
       "layout": {
@@ -114,3 +163,4 @@ map.on('load', function () {
       map.getCanvas().style.cursor = '';
   });
 });
+
