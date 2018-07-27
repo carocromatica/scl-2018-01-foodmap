@@ -36,7 +36,7 @@ map.on('load', function () {
               "features": [{
                   "type": "Feature",
                   "properties": {
-                      "description": "Helados artesanales",
+                      "description": "<a href=\"#emporioLaRosa\" class=\"btn\">Ver mas información</a>",
                       "icon": "cafe",
                       "text": "Emporio la Rosa"
                     
@@ -48,7 +48,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "Especialidad en pastas y bruschetas",
+                      "description": "<a href=\"#benditaPasta\" class=\"btn\">Ver mas información</a>",
                       "icon": "restaurant",
                       "text": "Restaurant Bendita Pasta"
                   },
@@ -59,7 +59,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "Café pintoresco",
+                      "description": "<a href=\"#cafeDelPoeta\" class=\"btn\">Ver mas información</a>",
                       "icon": "cafe",
                       "text": "Cafe del poeta"
                   },
@@ -70,7 +70,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "Restaurant Peruano",
+                      "description": "<a href=\"#nazca\" class=\"btn\">Ver mas información</a>",
                       "icon": "restaurant",
                       "text": "  Nazca"
                   },
@@ -83,7 +83,7 @@ map.on('load', function () {
               {
                 "type": "Feature",
                 "properties": {
-                    "description": "Bar Patrimonial",
+                    "description": "<a href=\"#cinzano\" class=\"btn\">Ver mas información</a>",
                     "icon": "bar",
                     "text": " Bar Cinzano",
                     "pago-tarjeta":"si"
@@ -97,7 +97,7 @@ map.on('load', function () {
             {
               "type": "Feature",
               "properties": {
-                  "description": "Completos rancios",
+                  "description": "<a href=\"#knibal\" class=\"btn\">Ver mas información</a>",
                   "icon": "fast-food",
                   "text": " Otro K-nibal",
                   "pago-tarjeta":"no"
@@ -111,7 +111,7 @@ map.on('load', function () {
           {
             "type": "Feature",
             "properties": {
-                "description": "<a href=\"#open-modal\" class=\"btn\">Ver mas información</a>",
+                "description": "<a href=\"#mascara\" class=\"btn\">Ver mas información</a>",
                 "icon": "bar",
                 "text": " Máscara Pub",
                 "pago-tarjeta":"no"

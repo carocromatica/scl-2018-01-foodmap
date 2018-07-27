@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="main.css">
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-  <style>
-    body { margin:0; padding:0; }
-    #map { position:fixed; top:0; bottom:0; width:100%; height: 600px; z-index: 1;}
-    .mapboxgl-popup {
-          max-width: 400px;
-          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      }
+    <meta charset='utf-8' />
+    <title>Filter symbols by toggling a list</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
 
-
-      .filter-group {
+<style>
+    .filter-group {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 600;
         position: absolute;
-        top: 10px;
+        top: 200px;
         right: 10px;
         z-index: 1;
         border-radius: 3px;
@@ -65,22 +59,15 @@
     .filter-group input[type=checkbox]:checked + label:before {
         content: '✔';
         margin-right: 5px;
-    }
-  </style>
-</head>
-<body>
-    
- <!--info de modals-->
-  <div id="open-modal" class="modal-window">
-    <div>
-      <a href="#modal-close" title="Close" class="modal-close">Close</a>
-      <h1>titulo</h1>
-      <div>asdasd</div>
-      </div>
-  </div>
 
-  <div id='map'></div>
-  <nav id='filter-group' class='filter-group'></nav>
-  <script src="mapfiltro.js"></script>
+        
+    }.mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+<div id='map'></div>
+<nav id='filter-group' class='filter-group'></nav>
+<script src="mapfiltro.js"></script>
 </body>
 </html>
