@@ -1,30 +1,66 @@
-html,
-
-
-
 body {
-  height: 100%;
+  
+  background-color: darkorange;
+
+font-family: 'Roboto', sans-serif;
+  
 }
 
-body {
-  font: 600 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  background-color: #f69d75;
-  color: #555555
-}
 
-a {
-  color: inherit;
-}
 
 .planValpo{
-  background-color: orange;
+
   text-align: center;
-  padding-top: 30%;
+  padding-top: 10%;
   width: 100%;
   color: white;
+  font-family: 'Patua One', cursive;
+  font-size: 150%;
 }
 
 
+/*header map*/
+
+header{
+  width: 100%;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  z-index: 999;
+}
+  
+  header p{
+    font-size: 14px;
+    text-align: center;
+    color: white;  
+    font-family: 'Patua One', cursive;
+  ;}
+
+/*mapbox styles*/
+#map {
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  z-index: 999;
+}
+
+.mapboxgl-ctrl-geocoder { /* para cambiar el ancho del input de busqueda*/
+
+  min-width: 300px!important;
+  
+}
+
+
+/*modals*/
 
 .modal-window {
   position: fixed;
@@ -62,7 +98,7 @@ a {
 }
 
 .modal-close {
-  color: #aaa;
+  color: gray;
   line-height: 50px;
   font-size: 80%;
   position: absolute;
@@ -87,22 +123,7 @@ i {
   vertical-align: middle;
 }
 
-header{width: 100%;
-height: 40px;
-background-color: darkorange;
-position: absolute;
-z-index: 999;}
-
-header p{
-  font-size: 14px;
-  text-align: center;
-  color: white;
-;}
 
 
-.mapboxgl-ctrl-geocoder {
 
-  min-width: 300px!important;
-  
-}
 

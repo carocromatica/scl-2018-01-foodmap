@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,95 +8,105 @@
   <title>PlanValpo</title>
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="main.css">
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-  
-  
-  
-  <style>
-    body { margin:0; padding:0; }
-    #map { position:fixed; top:40px; bottom:0; width:100%; height: 100%; z-index: 1;}
-    .mapboxgl-popup {
-          max-width: 400px;
-          font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-          z-index: 999;
-      }
-  </style>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css'
+    type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
 
-
-
-  <header><p>PlanValpo</p></header>
+  <header>
+    <p>PlanValpo</p>
+  </header>
   <!---->
   <div id="cafeDelPoeta" class="modal-window">
     <div>
       <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-      <h1>café del poeta</h1>
-      <div><img src="img/cafepoeta.jpg" width="50%"></div>
+      <h1>Café del Poeta</h1>
+      <div>
+        <img src="img/cafepoeta.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
     </div>
   </div>
-  
+
   <!---->
-  
-  
   <div id="benditaPasta" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Bendita Pasta</h1>
       <div>
-        <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-        <h1>Bendita Pasta</h1>
-        <div><img src="img/bendita.jpg" width="50%"></div>
+        <img src="img/bendita.jpg" width="50%">
+        <p>Descripcion Breve</p>
       </div>
     </div>
-    <!---->
+  </div>
+  <!---->
 
-    <div id="emporioLaRosa" class="modal-window">
-        <div>
-          <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-          <h1>Emporio La Rosa</h1>
-          <div><img src="img/emporio.jpg" width="50%"></div>
-        </div>
+  <div id="emporioLaRosa" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Emporio La Rosa</h1>
+      <div>
+        <img src="img/emporio.jpg" width="50%">
+        <p>Descripcion Breve</p>
       </div>
-      <!---->
+    </div>
+  </div>
+  <!---->
 
-    <div id="nazca" class="modal-window">
-        <div>
-          <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-          <h1>Nazca</h1>
-          <div><img src="img/nazca.jpg" width="50%"></div>
-        </div>
+  <div id="nazca" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Sazón Nazca</h1>
+      <div>
+        <img src="img/nazca.jpg" width="50%">
+        <p>Descripcion Breve</p>
       </div>
-      <!---->
-  
+    </div>
+  </div>
+  <!---->
+
   <div id="cinzano" class="modal-window">
     <div>
       <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-      <h1>cinzano</h1>
-      <div><img src="img/cinzano.jpg"width="50%"></div>
+      <h1>Cinzano</h1>
+      <div>
+        <img src="img/cinzano.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
     </div>
   </div>
   <!---->
-  
+
   <div id="mascara" class="modal-window">
     <div>
       <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-      <h1>titulo</h1>
-      <div><img src="img/mascara.jpg"width="50%"></div>
+      <h1>Máscara Pub</h1>
+      <div>
+        <img src="img/mascara.jpg" width="50%">
+        <p>Descripcion Breve</p>
+      </div>
     </div>
   </div>
 
   <div id="knibal" class="modal-window">
+    <div>
+      <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
+      <h1>Otro K-Nibal</h1>
       <div>
-        <a href="#modal-close" title="Close" class="modal-close">Cerrar</a>
-        <h1>Otro K-Nibal</h1>
-        <div><img src="img/knibal.jpg" width="50%"></div>
+        <img src="img/knibal.jpg" width="50%">
+        <p>Descripcion Breve</p>
       </div>
     </div>
-    <!---->
-  
+  </div>
+  <!---->
+
   <div id='map'></div>
   <nav id='filter-group' class='filter-group'></nav>
   <script src="map.js"></script>
-  </body>
-  
-  </html>
+</body>
+
+</html>
