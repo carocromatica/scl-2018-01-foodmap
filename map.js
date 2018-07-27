@@ -36,7 +36,7 @@ map.on('load', function () {
               "features": [{
                   "type": "Feature",
                   "properties": {
-                      "description": "<a href=\"#emporioLaRosa\" class=\"btn\">Ver mas información</a>",
+                      "description": "<strong>Emporio La Rosa</strong><li>Salón de Té</li><li>Promedio de consumo por persona: $7000</li><li>RedCompra: si</li><p><a href=\"#emporioLaRosa\" class=\"btn\">Ver mas información</a></p>",
                       "icon": "cafe",
                       "text": "Emporio la Rosa"
                     
@@ -48,7 +48,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "<a href=\"#benditaPasta\" class=\"btn\">Ver mas información</a>",
+                      "description": "<strong>Bendita Pasta</strong><li>Restaurant Internacional</li><li>Promedio de consumo por persona: $12000</li><li>RedCompra: si</li><p><a href=\"#benditaPasta\" class=\"btn\">Ver mas información</a>",
                       "icon": "restaurant",
                       "text": "Restaurant Bendita Pasta"
                   },
@@ -59,7 +59,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "<a href=\"#cafeDelPoeta\" class=\"btn\">Ver mas información</a>",
+                      "description": "<strong>Café del Poeta</strong><li>Café Turístico</li><li>Promedio de consumo por persona: $7000</li><li>RedCompra: si</li><p><a href=\"#cafeDelPoeta\" class=\"btn\">Ver mas información</a></p>",
                       "icon": "cafe",
                       "text": "Cafe del poeta"
                   },
@@ -70,7 +70,7 @@ map.on('load', function () {
               }, {
                   "type": "Feature",
                   "properties": {
-                      "description": "<a href=\"#nazca\" class=\"btn\">Ver mas información</a>",
+                      "description": "<strong>Nazca</strong><li>Restaurant Peruano</li><li>Promedio de consumo por persona: $12000</li><li>RedCompra: si</li><p><a href=\"#nazca\" class=\"btn\">Ver mas información</a></p>",
                       "icon": "restaurant",
                       "text": "  Nazca"
                   },
@@ -83,7 +83,7 @@ map.on('load', function () {
               {
                 "type": "Feature",
                 "properties": {
-                    "description": "<a href=\"#cinzano\" class=\"btn\">Ver mas información</a>",
+                    "description": "<strong>Cinzano</strong><li>Restaurant Patrimonial</li><li>Promedio de consumo por persona: $7000</li><li>RedCompra: si</li><p><a href=\"#cinzano\" class=\"btn\">Ver mas información</a></p>",
                     "icon": "bar",
                     "text": " Bar Cinzano",
                     "pago-tarjeta":"si"
@@ -97,7 +97,7 @@ map.on('load', function () {
             {
               "type": "Feature",
               "properties": {
-                  "description": "<a href=\"#knibal\" class=\"btn\">Ver mas información</a>",
+                  "description": "<strong>Otro K-Nibal</strong><li>Comida al Paso</li><li>Promedio de consumo por persona: $1500</li><li>RedCompra: no</li><p><a href=\"#knibal\" class=\"btn\">Ver mas información</a></p>",
                   "icon": "fast-food",
                   "text": " Otro K-nibal",
                   "pago-tarjeta":"no"
@@ -111,7 +111,7 @@ map.on('load', function () {
           {
             "type": "Feature",
             "properties": {
-                "description": "<a href=\"#mascara\" class=\"btn\">Ver mas información</a>",
+                "description": "<strong>Máscara</strong><li>Pub</li><li>Promedio de consumo por persona: $10000</li><li>RedCompra: no</li><p><a href=\"#mascara\" class=\"btn\">Ver mas información</a></p>",
                 "icon": "bar",
                 "text": " Máscara Pub",
                 "pago-tarjeta":"no"
