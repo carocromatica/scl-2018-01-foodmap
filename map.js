@@ -24,6 +24,7 @@ map.addControl(new mapboxgl.GeolocateControl({
 }));
 
 map.addControl(new mapboxgl.NavigationControl());
+
 map.on('load', function () {
   // Add a layer showing the places.
   map.addLayer({

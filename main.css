@@ -1,4 +1,7 @@
 html,
+
+
+
 body {
   height: 100%;
 }
@@ -13,29 +16,24 @@ a {
   color: inherit;
 }
 
-.container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.planValpo{
+  background-color: orange;
+  text-align: center;
+  padding-top: 30%;
+  width: 100%;
+  color: white;
 }
 
-.btn {
-  background-color: #fff;
-  padding: 1em 3em;
-  border-radius: 3px;
-  text-decoration: none;
-  top:700px;
-}
+
 
 .modal-window {
   position: fixed;
-  background-color: rgba(245, 202, 10, 0.6);
+  background-color: rgba(255, 157, 0, 0.6);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1111;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: all 0.3s;
